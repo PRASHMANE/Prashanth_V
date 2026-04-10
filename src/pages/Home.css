@@ -1,0 +1,482 @@
+.home {
+  height: 100vh;
+  background: #0a0a0a;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 40px;
+  color: white;
+  overflow: hidden;
+}
+
+/* CENTER */
+.center-content {
+  text-align: center;
+}
+
+.center-content h1 {
+  font-size: 40px;
+}
+
+.center-content span {
+  color: #ff9900;
+}
+
+.typing {
+  margin-top: 10px;
+  color: #ccc;
+}
+
+.cursor {
+  color: #ff9900;
+  animation: blink 1s infinite;
+}
+
+@keyframes blink {
+  50% { opacity: 0; }
+}
+
+/* BUTTON */
+.cv-btn {
+  display: inline-block;
+  margin-top: 20px;
+  padding: 10px 20px;
+  border: 2px solid #ff9900;
+  color: #ff9900;
+  text-decoration: none;
+  transition: 0.3s;
+}
+
+.cv-btn:hover {
+  background: #ff9900;
+  color: black;
+  box-shadow: 0 0 20px #ff9900;
+}
+
+/* SOCIAL */
+.socials {
+  position: absolute;
+  bottom: 30px;
+  left: 30px;
+  display: flex;
+  flex-direction: column;
+  gap: 95px;
+  font-size: 32px;
+}
+
+.socials svg {
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.socials svg:hover {
+  color: #ff9900;
+  transform: scale(1.2);
+}
+
+/* SKILLS RIGHT */
+.skills {
+  position: absolute;
+  right: 50px;
+  display: flex;
+  gap: 30px;
+}
+
+/* CARD */
+.card {
+  background: #111;
+  padding: 15px 20px;
+  margin: 10px 0;
+  border-radius: 10px;
+  border: 1px solid #222;
+  text-align: center;
+  transition: 0.3s;
+}
+
+.card:hover {
+  border-color: #ff9900;
+  box-shadow: 0 0 15px #ff9900;
+}
+
+/* COLUMN ANIMATION */
+.column {
+  display: flex;
+  flex-direction: column;
+}
+
+.up {
+  animation: moveUp 6s linear infinite;
+}
+
+.down {
+  animation: moveDown 6s linear infinite;
+}
+
+@keyframes moveUp {
+  0% { transform: translateY(100px); }
+  100% { transform: translateY(-100px); }
+}
+
+@keyframes moveDown {
+  0% { transform: translateY(-100px); }
+  100% { transform: translateY(100px); }
+}
+
+
+
+.card {
+  background: #111;
+  padding: 15px;
+  margin: 10px 0;
+  border-radius: 12px;
+  border: 1px solid #222;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-size: 16px;
+  transition: 0.3s;
+}
+
+/* ICON STYLE */
+.card svg {
+  font-size: 22px;
+  color: #ff9900;
+}
+
+/* TEXT */
+.card span {
+  color: white;
+}
+
+/* HOVER EFFECT */
+.card:hover {
+  border-color: #ff9900;
+  box-shadow: 0 0 15px #ff9900;
+  transform: scale(1.05);
+}
+
+
+
+
+
+
+
+
+/*------CARD ANIMATION------*/
+.card {
+  position: relative;
+  background: #111;
+  padding: 15px;
+  margin: 10px 0;
+  border-radius: 12px;
+  border: 1px solid #222;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  overflow: hidden;
+  transition: 0.3s;
+}
+
+/* ICON */
+.card svg {
+  font-size: 22px;
+  color: #ff9900;
+}
+
+/* TEXT */
+.card span {
+  color: white;
+}
+
+/* 🔥 GLOW SHADOW */
+.card:hover {
+  box-shadow:
+    0 0 10px #ff9900,
+    0 0 20px #ff9900,
+    0 0 40px #ff5500;
+  transform: scale(1.05);
+  border-color: #ff9900;
+}
+
+
+
+
+
+
+
+
+.card {
+  position: relative;
+  background: #111;
+  padding: 15px;
+  margin: 10px 0;
+  border-radius: 12px;
+  border: 1px solid #222;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  overflow: hidden;
+}
+
+/* TEXT */
+.card span {
+  color: white;
+}
+
+/* ICON */
+.card svg {
+  font-size: 22px;
+  color: #ff9900;
+}
+
+/* 🔥 CORNER GLOW */
+.card::before {
+  content: "";
+  position: absolute;
+  top: -30%;
+  left: -30%;
+  width: 80px;
+  height: 80px;
+  background: radial-gradient(circle, #ff9900, transparent 70%);
+  filter: blur(25px);
+  opacity: 0.7;
+}
+
+/* 🔥 SECOND CORNER (BOTTOM RIGHT) */
+.card::after {
+  content: "";
+  position: absolute;
+  bottom: -30%;
+  right: -30%;
+  width: 80px;
+  height: 80px;
+  background: radial-gradient(circle, #ff5500, transparent 70%);
+  filter: blur(25px);
+  opacity: 0.6;
+}
+
+
+@keyframes glowMove {
+  0% { transform: translate(0, 0); }
+  50% { transform: translate(10px, 10px); }
+  100% { transform: translate(0, 0); }
+}
+
+.card::before,
+.card::after {
+  animation: glowMove 4s ease-in-out infinite;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* INTRO */
+.intro {
+  font-size: 20px;
+  color: #ccc;
+  letter-spacing: 2px;
+}
+
+/* NAME */
+.name {
+  font-size: 55px;
+  font-weight: bold;
+  color: white;
+  margin: 10px 0;
+}
+
+/* HIGHLIGHT YOUR NAME */
+.name span {
+  color: #ff9900;
+}
+
+/* TYPING TEXT */
+.typing {
+  font-size: 22px;
+  color: #ff9900;
+  margin-top: 10px;
+}
+
+/* CURSOR */
+.cursor {
+  margin-left: 5px;
+  animation: blink 1s infinite;
+}
+
+@keyframes blink {
+  50% { opacity: 0; }
+}
+
+/* BUTTON */
+.cv-btn {
+  display: inline-block;
+  margin-top: 25px;
+  padding: 12px 25px;
+  border: 2px solid #ff9900;
+  color: #ff9900;
+  text-decoration: none;
+  border-radius: 8px;
+  transition: 0.3s;
+}
+
+.cv-btn:hover {
+  background: #ff9900;
+  color: black;
+  box-shadow: 0 0 20px #ff9900;
+}
+
+
+
+/* CENTER WRAPPER (TRUE CENTER) */
+.center-wrapper {
+  position: absolute;
+  top: 50%;
+  left: 40%;
+  transform: translate(-50%, -50%);
+  width: 100%;
+  text-align: center;
+}
+
+/* CONTENT */
+.center-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+/* HELLO TEXT */
+.intro {
+  font-size: 28px;
+  color: #aaa;
+  letter-spacing: 3px;
+}
+
+/* BIG NAME 🔥 */
+.name {
+  font-size: 80px; /* BIG */
+  font-weight: 900;
+  color: white;
+  margin: 15px 0;
+  line-height: 1.1;
+  text-shadow: 
+    0 0 10px rgba(255, 153, 0, 0.5),
+    0 0 20px rgba(255, 153, 0, 0.3);
+}
+
+/* TYPING TEXT */
+.typing {
+  font-size: 28px;
+  color: #ff9900;
+  margin-top: 10px;
+}
+
+/* CURSOR */
+.cursor {
+  margin-left: 5px;
+  animation: blink 1s infinite;
+}
+
+@keyframes blink {
+  50% { opacity: 0; }
+}
+
+/* BUTTON */
+.cv-btn {
+  margin-top: 30px;
+  padding: 14px 30px;
+  font-size: 18px;
+  border: 2px solid #ff9900;
+  color: #ff9900;
+  text-decoration: none;
+  border-radius: 10px;
+  transition: 0.3s;
+}
+
+.cv-btn:hover {
+  background: #ff9900;
+  color: black;
+  box-shadow: 0 0 25px #ff9900;
+  transform: scale(1.05);
+}
+
+
+
+
+
+
+
+
+/* LEFT SIDE HERO */
+.center-content {
+  position: absolute;
+  top: 50%;
+  left: 15%;
+  transform: translateY(-50%);
+  width: 50%; /* 👈 THIS MAKES IT COVER HALF SCREEN */
+}
+
+/* HELLO TEXT */
+.intro {
+  font-size: 90px;
+  color: #aaa;
+  letter-spacing: 2px;
+}
+
+/* BIG NAME 🔥 */
+.name {
+  font-size: 100px; /* 👈 SUPER BIG */
+  font-weight: 1000;
+  color: white;
+  margin: 15px 0;
+  line-height: 2.1;
+}
+
+/* TYPING TEXT */
+.typing {
+  font-size: 50px;
+  color: #ff9900;
+  margin-top: 15px;
+}
+
+/* CURSOR */
+.cursor {
+  margin-left: 5px;
+  animation: blink 1s infinite;
+}
+
+@keyframes blink {
+  50% { opacity: 0; }
+}
+
+/* BUTTON */
+.cv-btn {
+  display: inline-block;
+  margin-top: 30px;
+  padding: 15px 35px;
+  font-size: 18px;
+  border: 2px solid #ff9900;
+  color: #ff9900;
+  text-decoration: none;
+  border-radius: 10px;
+  transition: 0.3s;
+}
+
+.cv-btn:hover {
+  background: #ff9900;
+  color: black;
+  box-shadow: 0 0 25px #ff9900;
+  transform: scale(1.05);
+}

@@ -1,0 +1,26 @@
+.card {
+  background-color: var(--card-dark);
+  padding: 15px;
+  border-radius: 8px;
+  width: 250px;
+  transition: 0.3s;
+}
+
+.card:hover {
+  transform: scale(1.05);
+}
+
+.tags span {
+  background-color: #333;
+  margin-right: 5px;
+  padding: 3px 6px;
+  font-size: 12px;
+}
+
+button {
+  margin-top: 10px;
+  background-color: var(--primary);
+  border: none;
+  padding: 8px;
+  cursor: pointer;
+}

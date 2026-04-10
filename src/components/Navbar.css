@@ -1,0 +1,464 @@
+/* Smooth scroll when clicking links */
+html {
+  scroll-behavior: smooth;
+}
+
+/* Navbar container */
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #131921;
+  padding: 14px 30px;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+}
+
+/* Logo */
+.logo {
+  color: #ff9900;
+  font-size: 22px;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+/* Nav links container */
+.nav-links {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+
+/* Nav item (anchor tag) */
+.nav-item {
+  text-decoration: none;
+  color: white;
+  font-size: 14px;
+  position: relative;
+  transition: all 0.3s ease;
+}
+
+/* Hover color */
+.nav-item:hover {
+  color: #ff9900;
+}
+
+/* Underline animation */
+.nav-item::after {
+  content: "";
+  position: absolute;
+  width: 0%;
+  height: 2px;
+  background-color: #ff9900;
+  left: 0;
+  bottom: -5px;
+  transition: width 0.3s ease;
+}
+
+.nav-item:hover::after {
+  width: 100%;
+}
+
+/* Click effect */
+.nav-item:active {
+  transform: scale(0.95);
+}
+
+.nav-item.active {
+  color: #ff9900;
+}
+
+
+
+
+
+
+
+/* Navbar container */
+.navbar {
+  width: 100%;
+  padding: 15px 50px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #111; /* dark background */
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 100;
+  box-shadow: 0 2px 10px rgba(0,0,0,0.5);
+}
+
+/* Logo */
+.navbar .logo {
+  color: #ff9900;
+  font-size: 24px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: transform 0.2s;
+}
+
+.navbar .logo:hover {
+  transform: scale(1.1);
+}
+
+/* Nav links container */
+.navbar .nav-links {
+  display: flex;
+  gap: 25px;
+}
+
+/* Individual link */
+.navbar .nav-item {
+  color: white;
+  font-size: 16px;
+  font-weight: 500;
+  position: relative;
+  text-decoration: none;
+  padding: 8px 12px;
+  border-radius: 6px;
+  transition: all 0.3s ease;
+}
+
+/* Hover effect */
+.navbar .nav-item:hover {
+  background-color: #ff9900;
+  color: black;
+  transform: scale(1.05);
+}
+
+/* Active effect (click highlight) */
+.navbar .nav-item.active::after {
+  content: "";
+  position: absolute;
+  bottom: -6px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 50%;
+  height: 3px;
+  background-color: #ff9900;
+  border-radius: 2px;
+}
+
+/* Optional: smooth transition when active changes */
+.navbar .nav-item::after {
+  transition: all 0.3s ease;
+}
+
+
+
+
+
+
+
+
+
+/* Navbar container */
+.navbar {
+  width: 100%;
+  padding: 15px 50px;
+  display: flex;
+  justify-content: flex-start; /* move links to the left */
+  align-items: center;
+  background-color: #111;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 100;
+  box-shadow: 0 2px 10px rgba(0,0,0,0.5);
+}
+
+/* Logo */
+.navbar .logo {
+  color: #ff9900;
+  font-size: 24px;
+  font-weight: bold;
+  cursor: pointer;
+  margin-right: 40px; /* space between logo and links */
+  transition: transform 0.2s;
+}
+
+.navbar .logo:hover {
+  transform: scale(1.1);
+}
+
+/* Nav links container */
+.navbar .nav-links {
+  display: flex;
+  gap: 20px; /* reduce gap to fit all items */
+  flex-wrap: wrap; /* allow wrapping if too many links */
+}
+
+/* Individual link */
+.navbar .nav-item {
+  color: white;
+  font-size: 16px;
+  font-weight: 500;
+  position: relative;
+  text-decoration: none;
+  padding: 8px 12px;
+  border-radius: 6px;
+  transition: all 0.3s ease;
+}
+
+/* Hover effect */
+.navbar .nav-item:hover {
+  background-color: #ff9900;
+  color: black;
+  transform: scale(1.05);
+}
+
+/* Active effect (click highlight) */
+.navbar .nav-item.active::after {
+  content: "";
+  position: absolute;
+  bottom: -6px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 50%;
+  height: 3px;
+  background-color: #ff9900;
+  border-radius: 2px;
+}
+
+/* Optional: smooth transition when active changes */
+.navbar .nav-item::after {
+  transition: all 0.3s ease;
+}
+
+/* Responsive adjustments */
+@media (max-width: 1000px) {
+  .navbar {
+    padding: 15px 20px;
+  }
+  .navbar .nav-links {
+    gap: 10px;
+  }
+  .navbar .logo {
+    margin-right: 20px;
+  }
+}
+
+
+
+
+
+
+
+
+
+
+/* Navbar container */
+.navbar {
+  width: 100%;
+  padding: 15px 50px;
+  display: flex;
+  justify-content: flex-start; /* keep links to the left side slightly */
+  align-items: center;
+  background-color: #111;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 100;
+  box-shadow: 0 2px 10px rgba(0,0,0,0.5);
+}
+
+/* Logo */
+.navbar .logo {
+  color: #ff9900;
+  font-size: 24px;
+  font-weight: bold;
+  cursor: pointer;
+  margin-right: 60px; /* extra space to the right of logo, so links are slightly left but not too close */
+  transition: transform 0.2s;
+}
+
+.navbar .logo:hover {
+  transform: scale(1.1);
+}
+
+/* Nav links container */
+.navbar .nav-links {
+  display: flex;
+  gap: 25px; /* space between links */
+}
+
+/* Individual link */
+.navbar .nav-item {
+  color: white;
+  font-size: 16px;
+  font-weight: 500;
+  position: relative;
+  text-decoration: none;
+  padding: 8px 12px;
+  border-radius: 6px;
+  transition: all 0.3s ease;
+}
+
+/* Hover effect */
+.navbar .nav-item:hover {
+  background-color: #ff9900;
+  color: black;
+  transform: scale(1.05);
+}
+
+/* Active effect (click highlight) */
+.navbar .nav-item.active::after {
+  content: "";
+  position: absolute;
+  bottom: -6px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 50%;
+  height: 3px;
+  background-color: #ff9900;
+  border-radius: 2px;
+}
+
+/* Optional: smooth transition when active changes */
+.navbar .nav-item::after {
+  transition: all 0.3s ease;
+}
+
+/* Responsive adjustments */
+@media (max-width: 1000px) {
+  .navbar {
+    padding: 15px 20px;
+  }
+  .navbar .nav-links {
+    gap: 15px;
+  }
+  .navbar .logo {
+    margin-right: 30px;
+  }
+}
+
+
+
+
+
+
+
+
+
+/* Navbar container */
+.navbar {
+  width: 100%;
+  padding: 15px 50px;
+  display: flex;
+  align-items: center;
+  background-color: #111;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 100;
+  box-shadow: 0 2px 10px rgba(0,0,0,0.5);
+}
+
+/* Logo */
+.navbar .logo {
+  color: #ff9900;
+  font-size: 24px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: transform 0.2s;
+}
+
+.navbar .logo:hover {
+  transform: scale(1.1);
+}
+
+/* Nav links container: shifted slightly to the right */
+.navbar .nav-links {
+  display: flex;
+  gap: 25px;               /* space between links */
+  margin-left: 80px;       /* push links right slightly */
+}
+
+/* Individual link */
+.navbar .nav-item {
+  color: white;
+  font-size: 16px;
+  font-weight: 500;
+  position: relative;
+  text-decoration: none;
+  padding: 8px 12px;
+  border-radius: 6px;
+  transition: all 0.3s ease;
+}
+
+/* Hover effect */
+.navbar .nav-item:hover {
+  background-color: #ff9900;
+  color: black;
+  transform: scale(1.05);
+}
+
+/* Active effect (click highlight) */
+.navbar .nav-item.active::after {
+  content: "";
+  position: absolute;
+  bottom: -6px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 50%;
+  height: 3px;
+  background-color: #ff9900;
+  border-radius: 2px;
+}
+
+/* Responsive adjustments */
+@media (max-width: 1000px) {
+  .navbar {
+    padding: 15px 20px;
+  }
+  .navbar .nav-links {
+    margin-left: 40px;
+    gap: 15px;
+  }
+}
+
+
+
+
+
+
+
+
+
+/* Individual link with glow effect */
+.navbar .nav-item {
+  color: white;
+  font-size: 16px;
+  font-weight: 500;
+  position: relative;
+  text-decoration: none;
+  padding: 8px 12px;
+  border-radius: 6px;
+  transition: all 0.3s ease;
+  text-shadow: 0 0 2px #ff9900; /* subtle default glow */
+}
+
+/* Hover glow effect */
+.navbar .nav-item:hover {
+  background-color: #ff9900;
+  color: black;
+  transform: scale(1.05);
+  box-shadow: 0 0 10px #ff9900, 0 0 20px #ff9900, 0 0 30px #ff9900;
+  text-shadow: 0 0 5px #fff, 0 0 10px #ff9900, 0 0 15px #ff9900;
+}
+
+/* Active effect (click highlight) */
+.navbar .nav-item.active::after {
+  content: "";
+  position: absolute;
+  bottom: -6px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 50%;
+  height: 3px;
+  background-color: #ff9900;
+  border-radius: 2px;
+  box-shadow: 0 0 8px #ff9900, 0 0 12px #ff9900;
+}

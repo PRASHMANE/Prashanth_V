@@ -1,0 +1,421 @@
+/* Full screen overlay */
+.preloader {
+  position: fixed;
+  inset: 0;
+  background-color: #111;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 9999;
+}
+
+/* Content wrapper */
+.loader-content {
+  text-align: center;
+}
+
+/* Animated logo circle */
+.loader-icon {
+  width: 70px;
+  height: 70px;
+  border: 6px solid #ff9900;
+  border-top-color: transparent;
+  border-radius: 50%;
+  animation: spin 1s linear infinite;
+  margin-bottom: 12px;
+}
+
+/* Text */
+.loader-text {
+  color: #ff9900;
+  font-size: 18px;
+  font-weight: bold;
+  animation: fade 1.5s ease-in-out infinite;
+}
+
+/* Spin animation */
+@keyframes spin {
+  to { transform: rotate(360deg); }
+}
+
+/* Fade text */
+@keyframes fade {
+  0%, 100% { opacity: 1; }
+  50% { opacity: 0.4; }
+}
+
+
+
+
+
+/* Full screen */
+.preloader {
+  position: fixed;
+  inset: 0;
+  background: black;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 9999;
+}
+
+/* Name styling */
+.loader-name {
+  font-size: 60px;
+  font-weight: bold;
+  letter-spacing: 10px;
+  color: #ff9900;
+  display: flex;
+}
+
+/* Each letter */
+.loader-name span {
+  opacity: 0;
+  transform: translateY(50px) scale(0.8);
+  animation: reveal 0.6s forwards;
+}
+
+/* Rockstar entry animation */
+@keyframes reveal {
+  0% {
+    opacity: 0;
+    transform: translateY(80px) scale(0.5);
+    filter: blur(10px);
+  }
+  50% {
+    opacity: 1;
+    transform: translateY(-10px) scale(1.1);
+    filter: blur(2px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+    filter: blur(0);
+  }
+}
+
+/* Glow effect */
+.loader-name span {
+  text-shadow:
+    0 0 10px #ff9900,
+    0 0 20px #ff9900,
+    0 0 40px #ff9900;
+}
+
+/* Fade out whole screen */
+.preloader.fade-out {
+  animation: fadeOut 1s forwards;
+}
+
+@keyframes fadeOut {
+  to {
+    opacity: 0;
+    visibility: hidden;
+  }
+}
+
+
+
+
+
+
+/* Glow phase animation (one by one) */
+.glow-letter {
+  animation: glowPulse 0.5s forwards;
+}
+
+/* Delay each letter glow */
+.glow-letter:nth-child(1) { animation-delay: 0s; }
+.glow-letter:nth-child(2) { animation-delay: 0.1s; }
+.glow-letter:nth-child(3) { animation-delay: 0.2s; }
+.glow-letter:nth-child(4) { animation-delay: 0.3s; }
+.glow-letter:nth-child(5) { animation-delay: 0.4s; }
+.glow-letter:nth-child(6) { animation-delay: 0.5s; }
+.glow-letter:nth-child(7) { animation-delay: 0.6s; }
+.glow-letter:nth-child(8) { animation-delay: 0.7s; }
+.glow-letter:nth-child(9) { animation-delay: 0.8s; }
+
+/* Glow pulse effect */
+@keyframes glowPulse {
+  0% {
+    transform: scale(1);
+    text-shadow: 0 0 10px #ff9900;
+  }
+  50% {
+    transform: scale(1.3);
+    text-shadow:
+      0 0 20px #ff9900,
+      0 0 40px #ff9900,
+      0 0 60px #ff9900;
+  }
+  100% {
+    transform: scale(1);
+    text-shadow:
+      0 0 15px #ff9900,
+      0 0 30px #ff9900;
+  }
+}
+
+
+
+
+
+
+
+
+/* Full screen */
+.preloader {
+  position: fixed;
+  inset: 0;
+  background: black;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 30px;
+  z-index: 9999;
+}
+
+/* HEXAGON CONTAINER */
+.hex-container {
+  position: relative;
+  width: 200px;
+  height: 200px;
+}
+
+/* SVG */
+.hex-svg {
+  width: 100%;
+  height: 100%;
+}
+
+/* Hexagon draw animation */
+.hex-shape {
+  fill: transparent;
+  stroke: #ff9900;
+  stroke-width: 3;
+  stroke-dasharray: 600;
+  stroke-dashoffset: 600;
+  animation: drawHex 1.2s ease forwards;
+}
+
+/* Drawing effect */
+@keyframes drawHex {
+  to {
+    stroke-dashoffset: 0;
+  }
+}
+
+/* P letter inside */
+.logo-letter {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%) scale(0);
+  font-size: 60px;
+  font-weight: bold;
+  color: #ff9900;
+  animation: showP 0.5s ease forwards;
+}
+
+/* P animation */
+@keyframes showP {
+  0% {
+    transform: translate(-50%, -50%) scale(0.3);
+    opacity: 0;
+  }
+  100% {
+    transform: translate(-50%, -50%) scale(1);
+    opacity: 1;
+  }
+}
+
+/* Name typing */
+.name-text {
+  font-size: 30px;
+  color: #ff9900;
+  letter-spacing: 5px;
+  border-right: 2px solid #ff9900;
+  animation: blink 0.8s infinite;
+}
+
+/* Cursor blink */
+@keyframes blink {
+  0%, 50%, 100% { border-color: #ff9900; }
+  25%, 75% { border-color: transparent; }
+}
+
+
+
+
+
+
+
+
+
+
+/* FULL SCREEN */
+.preloader {
+  position: fixed;
+  inset: 0;
+  background: black;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 40px;
+  z-index: 9999;
+}
+
+/* HEXAGON */
+.hex-container {
+  position: relative;
+  width: 200px;
+  height: 200px;
+}
+
+.hex-svg {
+  width: 100%;
+  height: 100%;
+}
+
+/* Slow hex draw */
+.hex-shape {
+  fill: transparent;
+  stroke: #ff9900;
+  stroke-width: 3;
+  stroke-dasharray: 600;
+  stroke-dashoffset: 600;
+  animation: drawHex 2s ease forwards;
+}
+
+@keyframes drawHex {
+  to {
+    stroke-dashoffset: 0;
+  }
+}
+
+/* P LETTER */
+.logo-letter {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%) scale(0);
+  font-size: 60px;
+  font-weight: bold;
+  color: #ff9900;
+  animation: popP 0.6s ease forwards;
+}
+
+@keyframes popP {
+  0% {
+    transform: translate(-50%, -50%) scale(0.3);
+    opacity: 0;
+  }
+  60% {
+    transform: translate(-50%, -50%) scale(1.2);
+  }
+  100% {
+    transform: translate(-50%, -50%) scale(1);
+    opacity: 1;
+  }
+}
+
+/* ROCKSTAR NAME */
+.rock-name {
+  display: flex;
+  gap: 8px;
+  font-size: 40px;
+  font-weight: bold;
+}
+
+/* Each letter entry */
+.rock-name span {
+  opacity: 0;
+  transform: translateY(80px) scale(0.5);
+  color: #ff9900;
+
+  animation: rockEnter 0.6s ease forwards;
+}
+
+/* Rockstar animation */
+@keyframes rockEnter {
+  0% {
+    opacity: 0;
+    transform: translateY(100px) scale(0.3);
+    filter: blur(8px);
+  }
+  60% {
+    opacity: 1;
+    transform: translateY(-10px) scale(1.2);
+    filter: blur(2px);
+  }
+  100% {
+    transform: translateY(0) scale(1);
+    filter: blur(0);
+  }
+}
+
+/* Glow effect */
+.rock-name span {
+  text-shadow:
+    0 0 10px #ff9900,
+    0 0 20px #ff9900,
+    0 0 40px #ff9900;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* Reverse hexagon */
+.hex-container.reverse .hex-shape {
+  animation: reverseHex 1.5s ease forwards;
+}
+
+@keyframes reverseHex {
+  from {
+    stroke-dashoffset: 0;
+  }
+  to {
+    stroke-dashoffset: 600;
+  }
+}
+
+
+
+
+.rock-name.fade-out {
+  animation: fadeOutName 1s ease forwards;
+}
+
+@keyframes fadeOutName {
+  to {
+    opacity: 0;
+    transform: translateY(-30px);
+  }
+}
+
+
+
+
+.hex-container.reverse .logo-letter {
+  animation: fadeOutP 1s ease forwards;
+}
+
+@keyframes fadeOutP {
+  to {
+    opacity: 0;
+    transform: translate(-50%, -50%) scale(0.5);
+  }
+}

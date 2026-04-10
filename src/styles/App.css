@@ -1,0 +1,113 @@
+:root {
+  --primary: #ff9900;
+  --bg-dark: #0f1111;
+  --card-dark: #1a1a1a;
+  --text-light: #ffffff;
+  --text-gray: #cccccc;
+}
+
+body {
+  margin: 0;
+  background-color: var(--bg-dark);
+  color: var(--text-light);
+  font-family: Arial, sans-serif;
+}
+body {
+  cursor: none;
+}
+
+body {
+  cursor: none;
+}
+
+/* Main dot */
+.cursor-main {
+  position: fixed;
+  width: 10px;
+  height: 10px;
+  background-color: #ff9900;
+  border-radius: 50%;
+  pointer-events: none;
+  z-index: 9999;
+  transform: translate(-50%, -50%);
+}
+
+/* Child dots */
+.cursor-child {
+  position: fixed;
+  width: 6px;
+  height: 6px;
+  background-color: #ff9900;
+  border-radius: 50%;
+  pointer-events: none;
+  opacity: 0.6;
+  transform: translate(-50%, -50%);
+}
+
+body {
+  cursor: none;
+}
+
+/* main dot */
+.cursor-main {
+  position: fixed;
+  width: 10px;
+  height: 10px;
+  background: #ff9900;
+  border-radius: 50%;
+  transform: translate(-50%, -50%);
+  pointer-events: none;
+  z-index: 9999;
+}
+
+/* trailing dots */
+.cursor-child {
+  position: fixed;
+  width: 6px;
+  height: 6px;
+  background: #ff9900;
+  border-radius: 50%;
+  opacity: 0.5;
+  transform: translate(-50%, -50%);
+  pointer-events: none;
+}
+
+/* glow effect */
+.cursor-main,
+.cursor-child {
+  box-shadow: 0 0 12px #ff9900;
+}
+
+/* App.css or Cursor.css */
+
+
+
+
+
+/* Mother dot */
+.cursor-main {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 15px;
+  height: 15px;
+  background-color: #ff9900;
+  border-radius: 50%;
+  pointer-events: none;
+  z-index: 9999; /* stays above all elements */
+}
+
+/* Child dots */
+.cursor-child {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 10px;
+  height: 10px;
+  background-color: #ff9900;
+  border-radius: 50%;
+  pointer-events: none;
+  z-index: 9998; /* just below mother dot */
+}
+
+

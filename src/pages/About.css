@@ -1,0 +1,186 @@
+/* ===============================
+   ABOUT SECTION
+================================ */
+.about {
+  padding: 80px 10%;
+  background: #0a0a0a;
+  color: #ffffff;
+}
+
+/* Title */
+.about-title {
+  text-align: center;
+  font-size: 32px;
+  margin-bottom: 50px;
+  color: #ff9900;
+  text-shadow: 0 0 10px #ff9900;
+}
+
+/* Layout */
+.about-container {
+  display: flex;
+  gap: 60px;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+/* ===============================
+   LEFT SIDE
+================================ */
+.about-left {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+/* Image box */
+.about-image-box {
+  width: 260px;
+  height: 300px;
+  border-radius: 15px;
+  overflow: visible;
+  position: relative;
+  border: 2px solid #ff9900;
+  box-shadow: 0 0 25px rgba(255, 153, 0, 0.3);
+}
+
+/* Image */
+.about-image-box img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 15px;
+  transform: scale(1.1);
+  transition: 0.5s;
+}
+
+/* Hover pop */
+.about-image-box:hover img {
+  transform: scale(1.2) translateY(-10px);
+}
+
+/* Light sweep */
+.about-image-box::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 50%;
+  height: 100%;
+  background: linear-gradient(
+    120deg,
+    transparent,
+    rgba(255,255,255,0.4),
+    transparent
+  );
+  transform: skewX(-25deg);
+}
+
+.about-image-box:hover::before {
+  animation: lightSweep 1s forwards;
+}
+
+@keyframes lightSweep {
+  100% {
+    left: 150%;
+  }
+}
+
+/* Stats */
+.about-stats {
+  display: flex;
+  gap: 20px;
+  margin-top: 20px;
+}
+
+/* Stat cards */
+.stat-card {
+  width: 120px;
+  padding: 15px;
+  background: #111;
+  border-radius: 10px;
+  text-align: center;
+  border: 1px solid #222;
+  transition: 0.3s;
+}
+
+.stat-card h3 {
+  color: #ff9900;
+  font-size: 22px;
+}
+
+.stat-card p {
+  font-size: 14px;
+  color: #ccc;
+}
+
+.stat-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 0 20px #ff9900;
+}
+
+/* ===============================
+   RIGHT SIDE
+================================ */
+.about-right {
+  flex: 1;
+}
+
+/* Main card */
+.about-card-main {
+  background: linear-gradient(145deg, #111, #0a0a0a);
+  padding: 30px;
+  border-radius: 15px;
+  border: 1px solid rgba(255, 153, 0, 0.2);
+
+  box-shadow: 
+    0 0 15px rgba(255,153,0,0.2),
+    0 0 40px rgba(255,153,0,0.1);
+
+  transition: 0.4s;
+}
+
+.about-card-main:hover {
+  transform: translateY(-8px) scale(1.02);
+
+  box-shadow: 
+    0 0 25px #ff9900,
+    0 0 60px rgba(255,153,0,0.5);
+}
+
+/* ===============================
+   TEXT + TYPING EFFECT
+================================ */
+
+/* Normal text */
+.typed-line {
+  font-size: 16px;
+  line-height: 1.8;
+  margin-bottom: 12px;
+  color: #ffffff;
+}
+
+/* Highlight keywords ONLY */
+.highlight-orange {
+  color: #ff9900;
+  font-weight: bold;
+  text-shadow: 
+    0 0 5px #ff9900,
+    0 0 10px #ff9900,
+    0 0 20px rgba(255,153,0,0.6);
+}
+
+/* Cursor */
+.cursor {
+  color: #ff9900;
+  margin-left: 5px;
+  animation: blink 1s infinite;
+}
+
+@keyframes blink {
+  50% {
+    opacity: 0;
+  }
+}
