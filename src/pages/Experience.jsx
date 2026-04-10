@@ -1,67 +1,34 @@
 import { useState } from "react";
 import "./Experience.css";
-
-// ICONS
-import { FaEye, FaTimes, FaExternalLinkAlt } from "react-icons/fa";
-
-// IMAGES (ADD YOURS)
-import company1 from "../assets/hero.png";
-import company2 from "../assets/hero.png";
-import company3 from "../assets/hero.png";
-
-import offer1 from "../assets/hero.png";
-import offer2 from "../assets/hero.png";
-import offer3 from "../assets/hero.png";
-
-import leetcode from "../assets/hero.png";
-import github from "../assets/hero.png";
-import codeforces from "../assets/hero.png";
+import { FaEye } from "react-icons/fa";
 
 function Experience() {
   const [selectedImage, setSelectedImage] = useState(null);
 
-  const workData = [
+  const data = [
     {
-      company: "ABC Tech",
-      logo: company1,
-      location: "Bangalore",
+      company: "Tech Company A",
       role: "Backend Intern",
-      duration: "Jan 2024 - Mar 2024",
-      offer: offer1,
+      time: "Jan 2024 - May 2024",
+      location: "Bangalore",
+      logo: "https://via.placeholder.com/50",
+      proof: "https://via.placeholder.com/600", // offer letter
     },
     {
-      company: "XYZ Solutions",
-      logo: company2,
-      location: "Remote",
+      company: "Tech Company B",
       role: "Software Intern",
-      duration: "Jun 2024 - Aug 2024",
-      offer: offer2,
+      time: "Jun 2024 - Oct 2024",
+      location: "Remote",
+      logo: "https://via.placeholder.com/50",
+      proof: "https://via.placeholder.com/600",
     },
     {
-      company: "Startup Hub",
-      logo: company3,
-      location: "Hyderabad",
+      company: "Startup C",
       role: "AI/ML Intern",
-      duration: "Sep 2024 - Dec 2024",
-      offer: offer3,
-    },
-  ];
-
-  const codingData = [
-    {
-      name: "LeetCode",
-      logo: leetcode,
-      link: "https://leetcode.com/",
-    },
-    {
-      name: "GitHub",
-      logo: github,
-      link: "https://github.com/",
-    },
-    {
-      name: "Codeforces",
-      logo: codeforces,
-      link: "https://codeforces.com/",
+      time: "Nov 2024 - Present",
+      location: "Hyderabad",
+      logo: "https://via.placeholder.com/50",
+      proof: "https://via.placeholder.com/600",
     },
   ];
 
@@ -70,66 +37,50 @@ function Experience() {
 
       <h2 className="exp-title">Experience</h2>
 
-      <div className="exp-container">
+      <div className="exp-wrapper">
 
-        {/* LEFT SIDE */}
-        <div className="exp-left">
-          {workData.map((item, i) => (
-            <div className="exp-card" key={i}>
+        <div className="exp-line"></div>
 
-              {/* TOP */}
-              <div className="exp-top">
-                <div className="left">
-                  <img src={item.logo} alt="" />
+        {data.map((item, index) => (
+          <div
+            key={index}
+            className={`exp-item ${index % 2 === 0 ? "left" : "right"}`}
+          >
+
+            <div className="exp-card">
+
+              <div className="exp-header">
+                <img src={item.logo} alt="logo" />
+
+                <div>
                   <h3>{item.company}</h3>
+                  <p>{item.role}</p>
                 </div>
 
-                <span className="location">{item.location}</span>
+                <span className="loc">{item.location}</span>
               </div>
 
-              {/* ROLE */}
-              <p className="role">{item.role}</p>
+              <div className="exp-time">{item.time}</div>
 
-              {/* TIME */}
-              <p className="time">{item.duration}</p>
-
-              {/* EYE ICON */}
-              <div className="view-btn">
-                <FaEye onClick={() => setSelectedImage(item.offer)} />
+              {/* EYE BUTTON */}
+              <div
+                className="eye"
+                onClick={() => setSelectedImage(item.proof)}
+              >
+                <FaEye />
               </div>
 
             </div>
-          ))}
-        </div>
 
-        {/* RIGHT SIDE */}
-        <div className="exp-right">
-            
-          {codingData.map((item, i) => (
-            <div className="code-card" key={i}>
-
-              <div className="left">
-                <img src={item.logo} alt="" />
-                <h3>{item.name}</h3>
-              </div>
-
-              <a href={item.link} target="_blank" rel="noreferrer">
-                <FaExternalLinkAlt />
-              </a>
-
-            </div>
-          ))}
-        </div>
+          </div>
+        ))}
 
       </div>
 
       {/* MODAL */}
       {selectedImage && (
         <div className="modal" onClick={() => setSelectedImage(null)}>
-          <div className="modal-content" onClick={(e) => e.stopPropagation()}>
-            <FaTimes className="close" onClick={() => setSelectedImage(null)} />
-            <img src={selectedImage} alt="offer" />
-          </div>
+          <img src={selectedImage} alt="proof" />
         </div>
       )}
 

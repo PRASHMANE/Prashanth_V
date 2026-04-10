@@ -219,3 +219,365 @@
   transform: scale(1.2);
   filter: drop-shadow(0 0 12px #ff9900);
 }
+
+
+
+/* =========================
+   EXPERIENCE SECTION
+========================= */
+
+.experience {
+  padding: 90px 8%;
+  background: #0f0f0f;
+  color: white;
+}
+
+/* TITLE */
+.exp-title {
+  text-align: center;
+  font-size: 32px;
+  color: #ff9900;
+  margin-bottom: 50px;
+  text-shadow: 0 0 10px #ff9900;
+}
+
+/* WRAPPER */
+.exp-wrapper {
+  position: relative;
+  max-width: 900px;
+  margin: auto;
+}
+
+/* CENTER LINE */
+.exp-line {
+  position: absolute;
+  left: 50%;
+  top: 0;
+  width: 2px;
+  height: 100%;
+  background: linear-gradient(#ff9900, transparent);
+  transform: translateX(-50%);
+  box-shadow: 0 0 10px #ff9900;
+}
+
+/* ITEM */
+.exp-item {
+  width: 50%;
+  padding: 15px;
+  position: relative;
+}
+
+/* LEFT RIGHT */
+.exp-item.left {
+  left: 0;
+  text-align: right;
+}
+
+.exp-item.right {
+  left: 50%;
+  text-align: left;
+}
+
+/* CARD */
+.exp-card {
+  background: #1a1a1a;
+  padding: 15px;
+  border-radius: 12px;
+
+  border: 1px solid rgba(255, 153, 0, 0.2);
+  box-shadow: 0 0 10px rgba(255, 153, 0, 0.1);
+
+  transition: 0.3s;
+}
+
+/* HOVER */
+.exp-card:hover {
+  transform: scale(1.05);
+  box-shadow: 0 0 20px #ff9900;
+}
+
+/* TOP SECTION (OLD STYLE MIX) */
+.exp-top {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 10px;
+}
+
+/* LOGO */
+.exp-top img {
+  width: 40px;
+  height: 40px;
+  border-radius: 8px;
+}
+
+/* TEXT */
+.exp-top h3 {
+  font-size: 16px;
+  color: #ff9900;
+}
+
+.role {
+  font-size: 13px;
+  color: #ccc;
+}
+
+/* LOCATION */
+.location {
+  font-size: 11px;
+  color: #aaa;
+}
+
+/* TIME */
+.exp-time {
+  margin-top: 8px;
+  font-size: 12px;
+  color: #bbb;
+}
+
+/* EYE ICON */
+.exp-eye {
+  margin-top: 10px;
+  text-align: right;
+  color: #ff9900;
+  cursor: pointer;
+  filter: drop-shadow(0 0 5px #ff9900);
+}
+
+/* DOT STYLE (optional add like roadmap) */
+.exp-card::before {
+  content: "";
+  width: 10px;
+  height: 10px;
+  background: #ff9900;
+  border-radius: 50%;
+  position: absolute;
+  top: 20px;
+  box-shadow: 0 0 10px #ff9900;
+}
+
+/* POSITION DOT */
+.exp-item.left .exp-card::before {
+  right: -20px;
+}
+
+.exp-item.right .exp-card::before {
+  left: -20px;
+}
+
+/* ANIMATION */
+.exp-item {
+  opacity: 0;
+  transform: translateY(30px);
+  animation: fadeUp 0.6s forwards;
+}
+
+.exp-item:nth-child(1) { animation-delay: 0.1s; }
+.exp-item:nth-child(2) { animation-delay: 0.3s; }
+.exp-item:nth-child(3) { animation-delay: 0.5s; }
+
+@keyframes fadeUp {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* RESPONSIVE */
+@media (max-width: 768px) {
+  .exp-item {
+    width: 100%;
+    left: 0 !important;
+    text-align: left;
+  }
+
+  .exp-line {
+    left: 10px;
+  }
+
+  .exp-card::before {
+    left: -15px !important;
+  }
+}
+
+
+
+
+
+
+
+
+
+/* =========================
+   EXPERIENCE SECTION
+========================= */
+
+.experience {
+  padding: 80px 8%;
+  background: #0f0f0f;
+  color: white;
+}
+
+/* TITLE */
+.exp-title {
+  text-align: center;
+  font-size: 30px;
+  color: #ff9900;
+  margin-bottom: 50px;
+  text-shadow: 0 0 10px #ff9900;
+}
+
+/* WRAPPER */
+.exp-wrapper {
+  position: relative;
+  max-width: 900px;
+  margin: auto;
+}
+
+/* CENTER LINE */
+.exp-line {
+  position: absolute;
+  left: 50%;
+  top: 0;
+  width: 2px;
+  height: 100%;
+  background: #ff9900;
+  transform: translateX(-50%);
+  box-shadow: 0 0 10px #ff9900;
+}
+
+/* ITEM */
+.exp-item {
+  width: 50%;
+  padding: 15px;
+  position: relative;
+}
+
+/* LEFT RIGHT */
+.exp-item.left {
+  left: 0;
+  text-align: right;
+}
+
+.exp-item.right {
+  left: 50%;
+  text-align: left;
+}
+
+/* CARD (FIXED SIZE) */
+.exp-card {
+  background: #1a1a1a;
+  padding: 15px;
+  border-radius: 12px;
+
+  width: 280px;        /* 🔥 FIXED WIDTH */
+  min-height: 120px;   /* 🔥 FIXED HEIGHT */
+
+  border: 1px solid rgba(255, 153, 0, 0.2);
+  box-shadow: 0 0 10px rgba(255, 153, 0, 0.1);
+
+  position: relative;
+
+  transition: 0.3s;
+}
+
+/* HOVER */
+.exp-card:hover {
+  transform: scale(1.05);
+  box-shadow: 0 0 20px #ff9900;
+}
+
+/* HEADER */
+.exp-header {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+/* LOGO */
+.exp-header img {
+  width: 40px;
+  height: 40px;
+  border-radius: 6px;
+}
+
+/* TEXT */
+.exp-header h3 {
+  font-size: 15px;
+  color: #ff9900;
+}
+
+.exp-header p {
+  font-size: 12px;
+  color: #ccc;
+}
+
+.loc {
+  font-size: 11px;
+  color: #aaa;
+  margin-left: auto;
+}
+
+/* TIME */
+.exp-time {
+  margin-top: 10px;
+  font-size: 12px;
+  color: #bbb;
+}
+
+/* EYE ICON FIXED */
+.eye {
+  position: absolute;
+  bottom: 10px;
+  right: 10px;
+  color: #ff9900;
+  cursor: pointer;
+  font-size: 16px;
+  transition: 0.3s;
+}
+
+.eye:hover {
+  transform: scale(1.2);
+  filter: drop-shadow(0 0 8px #ff9900);
+}
+
+/* DOT */
+.exp-card::before {
+  content: "";
+  width: 10px;
+  height: 10px;
+  background: #ff9900;
+  border-radius: 50%;
+  position: absolute;
+  top: 15px;
+}
+
+/* DOT POSITION */
+.exp-item.left .exp-card::before {
+  right: -18px;
+}
+
+.exp-item.right .exp-card::before {
+  left: -18px;
+}
+
+/* MODAL */
+.modal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0,0,0,0.8);
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.modal img {
+  width: 70%;
+  max-width: 600px;
+  border-radius: 10px;
+  box-shadow: 0 0 20px #ff9900;
+}
