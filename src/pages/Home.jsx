@@ -18,10 +18,11 @@ import {
 function Home() {
 
   const roles = [
+    "Coder",
+    "Problem Solver",
     "Software Developer",
     "Backend Engineer",
-    "AI/ML Enthusiast",
-    "DevOps Learner"
+    "AI/ML Enthusiast"
   ];
 
   const [text, setText] = useState("");
@@ -107,6 +108,27 @@ function Home() {
             <SiKubernetes /> <span>K8s</span>
           </div>
 
+          <div className="card">
+            <SiPython /> <span>Python</span>
+          </div>
+
+          <div className="card">
+            <SiFastapi /> <span>FastAPI</span>
+          </div>
+
+          <div className="card">
+            <SiTensorflow /> <span>ML</span>
+          </div>
+
+          <div className="card">
+            <FaReact /> <span>React</span>
+          </div>
+
+          <div className="card">
+            <SiMysql /> <span>MySQL</span>
+          </div>
+
+
         </div>
 
         {/* DOWN COLUMN */}
@@ -130,6 +152,26 @@ function Home() {
 
           <div className="card">
             <SiMysql /> <span>MySQL</span>
+          </div>
+
+          <div className="card">
+            <FaJava /> <span>Java</span>
+          </div>
+
+          <div className="card">
+            <SiSpringboot /> <span>Spring</span>
+          </div>
+
+          <div className="card">
+            <FaDocker /> <span>Docker</span>
+          </div>
+
+          <div className="card">
+            <FaAws /> <span>AWS</span>
+          </div>
+
+          <div className="card">
+            <SiKubernetes /> <span>K8s</span>
           </div>
 
         </div>
@@ -158,6 +200,28 @@ function Home() {
             <SiKubernetes /> <span>K8s</span>
           </div>
 
+
+          <div className="card">
+            <SiPython /> <span>Python</span>
+          </div>
+
+          <div className="card">
+            <SiFastapi /> <span>FastAPI</span>
+          </div>
+
+          <div className="card">
+            <SiTensorflow /> <span>ML</span>
+          </div>
+
+          <div className="card">
+            <FaReact /> <span>React</span>
+          </div>
+
+          <div className="card">
+            <SiMysql /> <span>MySQL</span>
+          </div>
+
+
         </div>
 
         {/* DOWN COLUMN */}
@@ -181,6 +245,26 @@ function Home() {
 
           <div className="card">
             <SiMysql /> <span>MySQL</span>
+          </div>
+
+          <div className="card">
+            <FaJava /> <span>Java</span>
+          </div>
+
+          <div className="card">
+            <SiSpringboot /> <span>Spring</span>
+          </div>
+
+          <div className="card">
+            <FaDocker /> <span>Docker</span>
+          </div>
+
+          <div className="card">
+            <FaAws /> <span>AWS</span>
+          </div>
+
+          <div className="card">
+            <SiKubernetes /> <span>K8s</span>
           </div>
 
         </div>
