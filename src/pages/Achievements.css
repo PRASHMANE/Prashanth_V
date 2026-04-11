@@ -1,0 +1,138 @@
+/* SECTION */
+.achievements {
+  min-height: 100vh;
+  padding: 100px 8%;
+  background: #0a0a0a;
+  color: white;
+}
+
+/* TITLE */
+.ach-title {
+  text-align: center;
+  font-size: 32px;
+  color: #ff9900;
+  margin-bottom: 50px;
+  text-shadow: 0 0 10px #ff9900;
+}
+
+/* ROW (FIXED 3 CARDS) */
+.ach-row {
+  display: flex;
+  justify-content: center;
+  gap: 30px;
+  flex-wrap: wrap;
+}
+
+/* CARD */
+.ach-card {
+  width: 300px;
+  height: 200px;
+
+  background: #111;
+  padding: 20px;
+  border-radius: 15px;
+
+  border: 1px solid rgba(255,153,0,0.2);
+
+  position: relative;
+
+  box-shadow: 
+    0 0 10px rgba(255,153,0,0.2),
+    0 0 25px rgba(255,153,0,0.1);
+
+  transition: 0.3s;
+}
+
+/* HOVER */
+.ach-card:hover {
+  transform: translateY(-8px);
+
+  box-shadow: 
+    0 0 20px #ff9900,
+    0 0 50px rgba(255,153,0,0.5);
+}
+
+/* TEXT */
+.ach-card h3 {
+  color: #ff9900;
+  margin-bottom: 10px;
+}
+
+.ach-card p {
+  color: #ccc;
+  font-size: 14px;
+}
+
+/* EYE BUTTON */
+.eye-btn {
+  position: absolute;
+  bottom: 15px;
+  right: 15px;
+
+  background: #ff9900;
+  border: none;
+  padding: 10px;
+  border-radius: 50%;
+
+  cursor: pointer;
+
+  box-shadow: 0 0 10px #ff9900;
+
+  transition: 0.3s;
+}
+
+.eye-btn:hover {
+  transform: scale(1.2);
+
+  box-shadow: 
+    0 0 20px #ff9900,
+    0 0 40px rgba(255,153,0,0.6);
+}
+
+/* POPUP */
+.popup {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+
+  background: rgba(0,0,0,0.85);
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  z-index: 999;
+}
+
+/* POPUP CONTENT */
+.popup-content {
+  position: relative;
+  max-width: 700px;
+  width: 90%;
+}
+
+/* IMAGE */
+.popup-content img {
+  width: 100%;
+  border-radius: 10px;
+
+  box-shadow: 0 0 30px #ff9900;
+}
+
+/* CLOSE BUTTON */
+.close-btn {
+  position: absolute;
+  top: -15px;
+  right: -15px;
+
+  background: #ff9900;
+  border: none;
+  padding: 10px;
+  border-radius: 50%;
+
+  cursor: pointer;
+
+  box-shadow: 0 0 15px #ff9900;
+}

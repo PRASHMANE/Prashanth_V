@@ -4,9 +4,11 @@ import Home from "./pages/Home";
 import About from "./pages/About";
 import Skills from "./pages/Skills";
 import Experience from "./pages/Experience";
+import Projects from "./pages/Projects";
 import Education from "./pages/Education";
 import Contact from "./pages/Contact";
 import Preloader from "./components/Preloader";
+import Achievements from "./pages/Achievements";
 function App() {
   useEffect(() => {
   const main = document.querySelector(".cursor-main");
@@ -85,9 +87,9 @@ function App() {
       <section id="about" style={{ height: "100vh" }}> <About /> </section>
       <section id="skills" style={{ height: "100vh" }}> <Skills /> </section>
       <section id="experience" style={{ height: "100vh" }}> <Experience /> </section>
-      <section id="projects" style={{ height: "100vh" }}>Projects</section>
+      <section id="projects" style={{ height: "100vh" }}> <Projects /> </section>
       <section id="education" style={{ height: "100vh" }}> <Education /> </section>
-      <section id="achievements" style={{ height: "100vh" }}>Achievements</section>
+      <section id="achievements" style={{ height: "100vh" }}> <Achievements /> </section>
       <section id="contact" style={{ height: "100vh" }}> <Contact /> </section>
       
       

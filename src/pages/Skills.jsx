@@ -19,11 +19,15 @@ function Skills() {
       skills: [
         { name: "Java", level: 85, icon: java },
         { name: "Spring Boot", level: 80, icon: spring },
+        { name: "Java", level: 85, icon: java },
+        { name: "Spring Boot", level: 80, icon: spring },
       ],
     },
     {
       title: "Frontend",
       skills: [
+        { name: "React", level: 70, icon: react },
+        { name: "React", level: 70, icon: react },
         { name: "React", level: 70, icon: react },
       ],
     },
