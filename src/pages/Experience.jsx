@@ -1,18 +1,19 @@
 import { useState } from "react";
 import "./Experience.css";
 import { FaEye } from "react-icons/fa";
+import Almabetter from "../assets/hero.png";
 
 function Experience() {
   const [selectedImage, setSelectedImage] = useState(null);
 
   const data = [
     {
-      company: "Tech Company A",
-      role: "Backend Intern",
-      time: "Jan 2024 - May 2024",
-      location: "Bangalore",
-      logo: "https://via.placeholder.com/50",
-      proof: "https://via.placeholder.com/600", // offer letter
+      company: "AlmaBetter",
+      role: "Gen AI Intern",
+      time: "July 2025 -  Jan 2026",
+      location: "remort",
+      logo: Almabetter,
+      proof: Almabetter, // offer letter
     },
     {
       company: "Tech Company B",
