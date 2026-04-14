@@ -1,7 +1,9 @@
 import { useState } from "react";
 import "./Experience.css";
 import { FaEye } from "react-icons/fa";
-import Almabetter from "../assets/hero.png";
+import Almabetter from "../assets/AB.png";
+import Fuel from "../assets/Fuel.png";
+import Take from "../assets/Take.png";
 
 function Experience() {
   const [selectedImage, setSelectedImage] = useState(null);
@@ -20,7 +22,7 @@ function Experience() {
       role: "Software Intern",
       time: "Jun 2024 - Oct 2024",
       location: "Remote",
-      logo: "https://via.placeholder.com/50",
+      logo: Fuel,
       proof: "https://via.placeholder.com/600",
     },
     {
@@ -28,7 +30,7 @@ function Experience() {
       role: "AI/ML Intern",
       time: "Nov 2024 - Present",
       location: "Hyderabad",
-      logo: "https://via.placeholder.com/50",
+      logo: Take,
       proof: "https://via.placeholder.com/600",
     },
   ];
