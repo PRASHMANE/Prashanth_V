@@ -23,7 +23,7 @@ function Contact() {
         >
           <FaEnvelope />
           <p>Gmail</p>
-          <span>prashanthv46@gmail.com</span>
+          <span>p******46@gmail.com</span>
         </a>
 
         {/* LinkedIn */}

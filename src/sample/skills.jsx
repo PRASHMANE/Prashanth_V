@@ -1,103 +1,137 @@
+import { useState } from "react";
 import "./Skills.css";
 
-import {
-  FaJava, FaReact
-} from "react-icons/fa";
-
-import {
-  SiSpringboot, SiJavascript,SiPython
-} from "react-icons/si";
+// IMPORT LOGOS
+import java from "../assets/hero.png";
+import spring from "../assets/hero.png";
+import python from "../assets/hero.png";
+import react from "../assets/hero.png";
+import docker from "../assets/hero.png";
+import aws from "../assets/hero.png";
 
 function Skills() {
 
+  const [selected, setSelected] = useState(null);
+
   const skillData = [
     {
-      title: "Frontend (Basic)",
+      title: "Backend",
       skills: [
-        { name: "React", level: 70, icon: <FaReact /> },
-        { name: "HTML/CSS", level: 80, icon: <SiJavascript /> },
-        { name: "JavaScript", level: 65, icon: <SiJavascript /> },
+        { name: "Java", level: 85, icon: java },
+        { name: "Spring Boot", level: 80, icon: spring },
+        { name: "Java", level: 85, icon: java },
+        { name: "Spring Boot", level: 80, icon: spring },
       ],
     },
     {
-      title: "Strong Backend",
+      title: "Frontend",
       skills: [
-        { name: "Java", level: 85, icon: <FaJava /> },
-        { name: "Spring Boot", level: 85, icon: <SiSpringboot /> },
-        { name: "REST APIs", level: 80, icon: <SiSpringboot /> },
+        { name: "React", level: 70, icon: react },
+        { name: "React", level: 70, icon: react },
+        { name: "React", level: 70, icon: react },
       ],
     },
     {
-        title: "Microservices",
-        skills: [
-            { name: "Spring Cloud", level: 75, icon: <SiSpringboot /> },
-            { name: "Eureka", level: 70, icon: <SiSpringboot /> },
-            { name: "API Gateway", level: 70, icon: <SiSpringboot /> },
-          ],
-        },
-    {
-        title: "AI / ML",
-        skills: [
-            { name: "TensorFlow", level: 70, icon: <SiPython /> },
-            { name: "Scikit-learn", level: 75, icon: <SiPython /> },
-            { name: "NLP", level: 65, icon: <SiPython /> },
-        ],
-    },
-    {
-      title: "Frontend (Basic)",
+      title: "AI / ML",
       skills: [
-        { name: "React", level: 70, icon: <FaReact /> },
-        { name: "HTML/CSS", level: 80, icon: <SiJavascript /> },
-        { name: "JavaScript", level: 65, icon: <SiJavascript /> },
+        { name: "Python", level: 80, icon: python },
       ],
     },
     {
-      title: "Strong Backend",
+      title: "DevOps",
       skills: [
-        { name: "Java", level: 85, icon: <FaJava /> },
-        { name: "Spring Boot", level: 85, icon: <SiSpringboot /> },
-        { name: "REST APIs", level: 80, icon: <SiSpringboot /> },
+        { name: "Docker", level: 75, icon: docker },
+        { name: "AWS", level: 70, icon: aws },
       ],
     },
     {
-        title: "Microservices",
-        skills: [
-            { name: "Spring Cloud", level: 75, icon: <SiSpringboot /> },
-            { name: "Eureka", level: 70, icon: <SiSpringboot /> },
-            { name: "API Gateway", level: 70, icon: <SiSpringboot /> },
-          ],
-        },
+      title: "Backend",
+      skills: [
+        { name: "Java", level: 85, icon: java },
+        { name: "Spring Boot", level: 80, icon: spring },
+      ],
+    },
     {
-        title: "AI / ML",
-        skills: [
-            { name: "TensorFlow", level: 70, icon: <SiPython /> },
-            { name: "Scikit-learn", level: 75, icon: <SiPython /> },
-            { name: "NLP", level: 65, icon: <SiPython /> },
-        ],
-    }
+      title: "Frontend",
+      skills: [
+        { name: "React", level: 70, icon: react },
+      ],
+    },
+    {
+      title: "AI / ML",
+      skills: [
+        { name: "Python", level: 80, icon: python },
+      ],
+    },
+    {
+      title: "DevOps",
+      skills: [
+        { name: "Docker", level: 75, icon: docker },
+        { name: "AWS", level: 70, icon: aws },
+      ],
+    },
+    {
+      title: "Backend",
+      skills: [
+        { name: "Java", level: 85, icon: java },
+        { name: "Spring Boot", level: 80, icon: spring },
+      ],
+    },
+    {
+      title: "Frontend",
+      skills: [
+        { name: "React", level: 70, icon: react },
+      ],
+    },
+    {
+      title: "AI / ML",
+      skills: [
+        { name: "Python", level: 80, icon: python },
+      ],
+    },
+    {
+      title: "DevOps",
+      skills: [
+        { name: "Docker", level: 75, icon: docker },
+        { name: "AWS", level: 70, icon: aws },
+      ],
+    },
   ];
 
   return (
     <section className="skills-section">
 
-      <h2 className="skills-title">Skills & Expertise</h2>
+      <h2>My Skills</h2>
 
-      <div className="skills-container">
-        {skillData.map((domain, index) => (
-          <div className="skill-card" key={index}>
+      {/* GRID */}
+      <div className="skills-grid">
+        {skillData.map((item, index) => (
+          <div
+            key={index}
+            className="skill-card"
+            onClick={() => setSelected(item)}
+          >
+            <h3>{item.title}</h3>
+            <p>Click to view</p>
+          </div>
+        ))}
+      </div>
 
-            <h3>{domain.title}</h3>
+      {/* MODAL */}
+      {selected && (
+        <div className="modal" onClick={() => setSelected(null)}>
+          <div className="modal-content" onClick={(e) => e.stopPropagation()}>
 
-            {domain.skills.map((skill, i) => (
-              <div key={i} className="skill-item">
+            <h2>{selected.title}</h2>
+
+            {selected.skills.map((skill, i) => (
+              <div key={i} className="modal-skill">
 
                 <div className="skill-header">
-
                   <div className="left">
-                    <span className="icon">{skill.icon}</span>
+                    <img src={skill.icon} alt="" />
                     <span>{skill.name}</span>
                   </div>
-
                   <span>{skill.level}%</span>
                 </div>
 
@@ -111,9 +145,11 @@ function Skills() {
               </div>
             ))}
 
+            <button onClick={() => setSelected(null)}>Close</button>
+
           </div>
-        ))}
-      </div>
+        </div>
+      )}
 
     </section>
   );

@@ -7,7 +7,16 @@ function Projects() {
   const projects = [
     {
     name: "JungleEye AI",
-    video: project1,
+    video: "",
+    tools: ["Python", "OpenCV", "TensorFlow"],
+    desc: "AI-based wildlife monitoring system.",
+    live: "",
+    github: "https://github.com/PRASHMANE",
+  },
+
+  {
+    name: "JungleEye AI",
+    video: "",
     tools: ["Python", "OpenCV", "TensorFlow"],
     desc: "AI-based wildlife monitoring system.",
     live: "",

@@ -1,31 +1,45 @@
+import { useState } from "react";
 import "./Education.css";
+import { FaEye } from "react-icons/fa";
+
+import School from "../assets/St.png";
+import PU from "../assets/PES.png";
+import College from "../assets/CIT.png";
 
 function Education() {
+  const [selectedImage, setSelectedImage] = useState(null);
+
   const data = [
     {
-      title: "School",
-      place: "XYZ High School",
-      year: "2018 - 2020",
-      desc: "Built strong academic foundation and discipline.",
+      institute: "St.Thomas Convent And High School",
+      degree: "SSLC (10th)",
+      time: "2019 - 2020",
+      location: "Karnataka",
+      logo: School,
+      proof: School, // marksheet
     },
     {
-      title: "PUC",
-      place: "ABC PU College",
-      year: "2020 - 2022",
-      desc: "Focused on Science and developed interest in coding.",
+      institute: "P.E.S PU College",
+      degree: "PUC (12th)",
+      time: "2020 - 2022",
+      location: "Karnataka",
+      logo: PU,
+      proof: PU,
     },
     {
-      title: "Engineering",
-      place: "CSE - Final Year",
-      year: "2022 - 2026",
-      desc: "Specialized in Backend, AI/ML, System Design.",
+      institute: "Cambridge Institute Of Technology North Campus",
+      degree: "B.E / B.Tech",
+      time: "2022 - 2026",
+      location: "India",
+      logo: College,
+      proof: College,
     },
   ];
 
   return (
     <section className="education">
 
-      <h2 className="edu-title">Education Roadmap</h2>
+      <h2 className="edu-title">Education</h2>
 
       <div className="edu-wrapper">
 
@@ -39,12 +53,26 @@ function Education() {
 
             <div className="edu-card">
 
-              <div className="dot"></div>
+              <div className="edu-header">
+                <img src={item.logo} alt="logo" />
 
-              <h3>{item.title}</h3>
-              <h4>{item.place}</h4>
-              <span>{item.year}</span>
-              <p>{item.desc}</p>
+                <div>
+                  <h3>{item.institute}</h3>
+                  <p>{item.degree}</p>
+                </div>
+
+                <span className="loc">{item.location}</span>
+              </div>
+
+              <div className="edu-time">{item.time}</div>
+
+              {/* 👁 VIEW BUTTON */}
+              <div
+                className="eye"
+                onClick={() => setSelectedImage(item.proof)}
+              >
+                <FaEye />
+              </div>
 
             </div>
 
@@ -52,6 +80,14 @@ function Education() {
         ))}
 
       </div>
+
+      {/* MODAL */}
+      {selectedImage && (
+        <div className="modal" onClick={() => setSelectedImage(null)}>
+          <img src={selectedImage} alt="proof" />
+        </div>
+      )}
+
     </section>
   );
 }

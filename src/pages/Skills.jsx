@@ -1,153 +1,193 @@
 import { useState } from "react";
 import "./Skills.css";
 
-// IMPORT LOGOS
-import java from "../assets/hero.png";
-import spring from "../assets/hero.png";
-import python from "../assets/hero.png";
-import react from "../assets/hero.png";
-import docker from "../assets/hero.png";
-import aws from "../assets/hero.png";
-
 function Skills() {
 
-  const [selected, setSelected] = useState(null);
+  const [activeSkill, setActiveSkill] = useState(null);
 
-  const skillData = [
+  const skills = [
     {
-      title: "Backend",
-      skills: [
-        { name: "Java", level: 85, icon: java },
-        { name: "Spring Boot", level: 80, icon: spring },
-        { name: "Java", level: 85, icon: java },
-        { name: "Spring Boot", level: 80, icon: spring },
+      title: "Languages",
+      desc: "Java · Python · SQL",
+
+      // ✅ SHOW ONLY THIS IN CARD
+      preview: [
+        { name: "Python", percent: 98 },
+        { name: "Java", percent: 92 },
+        { name: "JavaScript", percent: 65 },
       ],
+
+      // ✅ SHOW THIS IN MODAL (FULL)
+      full: [
+        { name: "Python", percent: 98 },
+        { name: "Java", percent: 92 },
+        { name: "JavaScript", percent: 65 },
+        { name: "Sql", percent: 75 },
+        { name: "C", percent: 60 },
+        { name: "Flutter", percent: 50 },
+      ]
     },
+
     {
-      title: "Frontend",
-      skills: [
-        { name: "React", level: 70, icon: react },
-        { name: "React", level: 70, icon: react },
-        { name: "React", level: 70, icon: react },
+      title: "Frount-End",
+      desc: "React · HTML/CSS",
+
+      preview: [
+        { name: "React", percent: 90 },
+        { name: "HTML", percent: 85 },
+        { name: "CSS", percent: 80 },
       ],
-    },
-    {
-      title: "AI / ML",
-      skills: [
-        { name: "Python", level: 80, icon: python },
-      ],
-    },
-    {
-      title: "DevOps",
-      skills: [
-        { name: "Docker", level: 75, icon: docker },
-        { name: "AWS", level: 70, icon: aws },
-      ],
-    },
-    {
-      title: "Backend",
-      skills: [
-        { name: "Java", level: 85, icon: java },
-        { name: "Spring Boot", level: 80, icon: spring },
-      ],
-    },
-    {
-      title: "Frontend",
-      skills: [
-        { name: "React", level: 70, icon: react },
-      ],
-    },
-    {
-      title: "AI / ML",
-      skills: [
-        { name: "Python", level: 80, icon: python },
-      ],
-    },
-    {
-      title: "DevOps",
-      skills: [
-        { name: "Docker", level: 75, icon: docker },
-        { name: "AWS", level: 70, icon: aws },
-      ],
+
+      full: [
+        { name: "React", percent: 90 },
+        { name: "HTML", percent: 85 },
+        { name: "CSS", percent: 80 },
+      ]
     },
     {
       title: "Backend",
-      skills: [
-        { name: "Java", level: 85, icon: java },
-        { name: "Spring Boot", level: 80, icon: spring },
+      desc: "APIs · Microservices",
+
+      // ✅ SHOW ONLY THIS IN CARD
+      preview: [
+        { name: "Spring Boot", percent: 90 },
+        { name: "REST APIs", percent: 92 },
+        { name: "Microservices", percent: 85 },
       ],
+
+      // ✅ SHOW THIS IN MODAL (FULL)
+      full: [
+        { name: "Spring Boot", percent: 90 },
+        { name: "REST APIs", percent: 92 },
+        { name: "Microservices", percent: 85 },
+        { name: "Kafka", percent: 75 },
+        { name: "gRPC", percent: 70 },
+        { name: "JWT Auth", percent: 88 },
+      ]
     },
     {
-      title: "Frontend",
-      skills: [
-        { name: "React", level: 70, icon: react },
+      title: "AI/ML/GenAI",
+      desc: "TensorFlow · PyTorch · Hugging Face",
+
+      // ✅ SHOW ONLY THIS IN CARD
+      preview: [
+        { name: "Spring Boot", percent: 90 },
+        { name: "REST APIs", percent: 92 },
+        { name: "Microservices", percent: 85 },
       ],
+
+      // ✅ SHOW THIS IN MODAL (FULL)
+      full: [
+        { name: "Spring Boot", percent: 90 },
+        { name: "REST APIs", percent: 92 },
+        { name: "Microservices", percent: 85 },
+        { name: "Kafka", percent: 75 },
+        { name: "gRPC", percent: 70 },
+        { name: "JWT Auth", percent: 88 },
+      ]
     },
     {
-      title: "AI / ML",
-      skills: [
-        { name: "Python", level: 80, icon: python },
+      title: "Databases",
+      desc: "SQL · NoSQL · MongoDB",
+
+      // ✅ SHOW ONLY THIS IN CARD
+      preview: [
+        { name: "Spring Boot", percent: 90 },
+        { name: "REST APIs", percent: 92 },
+        { name: "Microservices", percent: 85 },
       ],
+
+      // ✅ SHOW THIS IN MODAL (FULL)
+      full: [
+        { name: "Spring Boot", percent: 90 },
+        { name: "REST APIs", percent: 92 },
+        { name: "Microservices", percent: 85 },
+        { name: "Kafka", percent: 75 },
+        { name: "gRPC", percent: 70 },
+        { name: "JWT Auth", percent: 88 },
+      ]
     },
     {
       title: "DevOps",
-      skills: [
-        { name: "Docker", level: 75, icon: docker },
-        { name: "AWS", level: 70, icon: aws },
+      desc: "CI/CD · Docker · Kubernetes",
+
+      // ✅ SHOW ONLY THIS IN CARD
+      preview: [
+        { name: "Spring Boot", percent: 90 },
+        { name: "REST APIs", percent: 92 },
+        { name: "Microservices", percent: 85 },
       ],
+
+      // ✅ SHOW THIS IN MODAL (FULL)
+      full: [
+        { name: "Spring Boot", percent: 90 },
+        { name: "REST APIs", percent: 92 },
+        { name: "Microservices", percent: 85 },
+        { name: "Kafka", percent: 75 },
+        { name: "gRPC", percent: 70 },
+        { name: "JWT Auth", percent: 88 },
+      ]
     },
   ];
 
   return (
     <section className="skills-section">
 
-      <h2>My Skills</h2>
+      <h2 className="skills-title">Skills</h2>
 
-      {/* GRID */}
       <div className="skills-grid">
-        {skillData.map((item, index) => (
+
+        {skills.map((skill, i) => (
           <div
-            key={index}
+            key={i}
             className="skill-card"
-            onClick={() => setSelected(item)}
+            onClick={() => setActiveSkill(skill)}
           >
-            <h3>{item.title}</h3>
-            <p>Click to view</p>
-          </div>
-        ))}
-      </div>
+            <h3>{skill.title}</h3>
+            <p>{skill.desc}</p>
 
-      {/* MODAL */}
-      {selected && (
-        <div className="modal" onClick={() => setSelected(null)}>
-          <div className="modal-content" onClick={(e) => e.stopPropagation()}>
-
-            <h2>{selected.title}</h2>
-
-            {selected.skills.map((skill, i) => (
-              <div key={i} className="modal-skill">
-
-                <div className="skill-header">
-                  <div className="left">
-                    <img src={skill.icon} alt="" />
-                    <span>{skill.name}</span>
-                  </div>
-                  <span>{skill.level}%</span>
+            {/* 🔥 ONLY PREVIEW SHOWN */}
+            {skill.preview.map((item, idx) => (
+              <div key={idx} className="bar">
+                <span>{item.name}</span>
+                <div className="progress">
+                  <div style={{ width: `${item.percent}%` }}></div>
                 </div>
-
-                <div className="progress-bar">
-                  <div
-                    className="progress-fill"
-                    style={{ width: `${skill.level}%` }}
-                  ></div>
-                </div>
-
               </div>
             ))}
 
-            <button onClick={() => setSelected(null)}>Close</button>
+            {/* 👉 small hint */}
+            <p className="more">+ more...</p>
 
           </div>
+        ))}
+
+      </div>
+
+      {/* 🔥 FULL REPORT MODAL */}
+      {activeSkill && (
+        <div className="modal" onClick={() => setActiveSkill(null)}>
+
+          <div
+            className="report-card"
+            onClick={(e) => e.stopPropagation()}
+          >
+            <h2>{activeSkill.title} Report</h2>
+
+            {/* 🔥 SHOW FULL DATA */}
+            {activeSkill.full.map((item, i) => (
+              <div key={i} className="report-row">
+                <span>{item.name}</span>
+                <span>{item.percent}%</span>
+              </div>
+            ))}
+
+            <button onClick={() => setActiveSkill(null)}>
+              Close
+            </button>
+
+          </div>
+
         </div>
       )}
 
