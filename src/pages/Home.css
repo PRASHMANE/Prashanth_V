@@ -314,6 +314,51 @@
 
 
 
+.home {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+/* MOBILE */
+@media (max-width: 768px) {
+  .home {
+    flex-direction: column;
+    align-items: center;
+  }
+}
+
+
+
+.skills {
+  display: flex;
+}
+
+/* MOBILE FIX */
+@media (max-width: 768px) {
+  .skills {
+    width: 100%;
+    margin-top: 20px;
+    justify-content: center;
+    flex-wrap: wrap;
+  }
+}
+
+
+@media (max-width: 768px) {
+  .card {
+    width: 80px;
+    margin: 5px;
+    font-size: 12px;
+  }
+}
+
+
+@media (max-width: 768px) {
+  .skills {
+    display: none;
+  }
+}
 
 
 
