@@ -10,41 +10,51 @@ function Preloader() {
   const [reverse, setReverse] = useState(false);
 
   useEffect(() => {
-    setTimeout(() => setShowP(true), 1800);
-    setTimeout(() => setShowName(true), 2600);
+    const isMobile = window.innerWidth < 768;
 
-    // Start reverse animation
-    setTimeout(() => setReverse(true), 4500);
+    const t1 = setTimeout(() => setShowP(true), isMobile ? 400 : 1200);
+    const t2 = setTimeout(() => setShowName(true), isMobile ? 800 : 2000);
+    const t3 = setTimeout(() => setReverse(true), isMobile ? 1800 : 3500);
+    const t4 = setTimeout(() => {
+      setShow(false);
+      document.body.style.overflow = "auto";
+    }, isMobile ? 2500 : 4000);
 
-    // Remove loader
-    setTimeout(() => setShow(false), 6000);
+    document.body.style.overflow = "hidden";
+
+    return () => {
+      clearTimeout(t1);
+      clearTimeout(t2);
+      clearTimeout(t3);
+      clearTimeout(t4);
+    };
   }, []);
 
+  if (!show) return null;
+
   return (
-    show && (
-      <div className="preloader">
-        <div className={`hex-container ${reverse ? "reverse" : ""}`}>
-          <svg viewBox="0 0 200 200" className="hex-svg">
-            <polygon
-              points="100,10 180,55 180,145 100,190 20,145 20,55"
-              className="hex-shape"
-            />
-          </svg>
+    <div className="preloader">
+      <div className={`hex-container ${reverse ? "reverse" : ""}`}>
+        <svg viewBox="0 0 200 200" className="hex-svg">
+          <polygon
+            points="100,10 180,55 180,145 100,190 20,145 20,55"
+            className="hex-shape"
+          />
+        </svg>
 
-          {showP && <div className="logo-letter">P</div>}
-        </div>
-
-        {showName && (
-          <h1 className={`rock-name ${reverse ? "fade-out" : ""}`}>
-            {name.split("").map((letter, index) => (
-              <span key={index} style={{ animationDelay: `${index * 0.1}s` }}>
-                {letter}
-              </span>
-            ))}
-          </h1>
-        )}
+        {showP && <div className="logo-letter">P</div>}
       </div>
-    )
+
+      {showName && (
+        <h1 className={`rock-name ${reverse ? "fade-out" : ""}`}>
+          {name.split("").map((letter, index) => (
+            <span key={index} style={{ animationDelay: `${index * 0.08}s` }}>
+              {letter}
+            </span>
+          ))}
+        </h1>
+      )}
+    </div>
   );
 }
 

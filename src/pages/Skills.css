@@ -157,3 +157,60 @@
   color: #ff9900;
   text-align: right;
 }
+
+
+
+
+
+
+
+
+
+
+
+@media (max-width: 768px) {
+  .skills {
+    display: none;
+  }
+}
+
+
+
+@media (max-width: 768px) {
+  .skills {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 10px;
+    margin-top: 20px;
+  }
+
+  .column {
+    display: contents;
+  }
+
+  .card {
+    font-size: 12px;
+    padding: 8px;
+  }
+}
+
+
+
+
+
+@media (max-width: 768px) {
+  .name {
+    font-size: 2rem;
+  }
+
+  .typing {
+    font-size: 1.2rem;
+  }
+}
+
+
+
+
+.center-wrapper {
+  width: 100%;
+}
