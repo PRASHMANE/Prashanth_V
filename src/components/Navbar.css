@@ -462,3 +462,22 @@ html {
   border-radius: 2px;
   box-shadow: 0 0 8px #ff9900, 0 0 12px #ff9900;
 }
+
+
+@media (max-width: 768px) {
+  .preloader {
+    left: 50%;
+    transform: translateX(-50%);
+    width: 100vw;
+  }
+
+  .hex-container {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+  }
+
+  .hex-svg {
+    margin: 0 auto;
+  }
+}
