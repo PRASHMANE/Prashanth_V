@@ -481,3 +481,41 @@ html {
     margin: 0 auto;
   }
 }
+
+
+
+
+
+
+
+
+/* 🔥 MOBILE ONLY */
+@media (max-width: 768px) {
+
+  .hamburger {
+    display: block;
+    font-size: 24px;
+    cursor: pointer;
+  }
+
+  .nav-links {
+    display: none;
+    flex-direction: column;
+    position: absolute;
+    top: 60px;
+    right: 10px;
+    background: black;
+    padding: 15px;
+    border-radius: 8px;
+  }
+
+  .nav-links.show {
+    display: flex;
+  }
+}
+
+
+
+.hamburger {
+  display: none;
+}
