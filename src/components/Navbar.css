@@ -519,3 +519,27 @@ html {
 .hamburger {
   display: none;
 }
+
+
+
+
+.navbar {
+  width: 100%;
+  box-sizing: border-box; /* prevents overflow */
+}
+
+.nav-links {
+  flex-wrap: wrap; /* prevents overflow */
+}
+
+@media (max-width: 768px) {
+
+  .nav-links {
+    display: none;
+  }
+
+  .navbar {
+    justify-content: space-between;
+  }
+
+}
