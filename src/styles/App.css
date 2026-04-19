@@ -111,3 +111,34 @@ body {
 }
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+.container {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+@media (max-width: 768px) {
+  .container {
+    flex-direction: column;
+  }
+}
+
+
+
+
+img {
+  width: 100%;
+  height: auto;
+}

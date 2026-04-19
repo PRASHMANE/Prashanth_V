@@ -83,14 +83,14 @@ function App() {
       
       <Preloader/>
       <Navbar />
-      <section id="home" style={{ height: "100vh" }}> <Home /> </section>
-      <section id="about" style={{ height: "100vh" }}> <About /> </section>
-      <section id="skills" style={{ height: "100vh" }}> <Skills /> </section>
-      <section id="experience" style={{ height: "100vh" }}> <Experience /> </section>
-      <section id="projects" style={{ height: "100vh" }}> <Projects /> </section>
-      <section id="education" style={{ height: "100vh" }}> <Education /> </section>
-      <section id="achievements" style={{ height: "100vh" }}> <Achievements /> </section>
-      <section id="contact" style={{ height: "100vh" }}> <Contact /> </section>
+      <section id="home" style={{ minHeight: "100vh" }}> <Home /> </section>
+      <section id="about" style={{ minHeight: "100vh" }}> <About /> </section>
+      <section id="skills" style={{ minHeight: "100vh" }}> <Skills /> </section>
+      <section id="experience" style={{ minHeight: "100vh" }}> <Experience /> </section>
+      <section id="projects" style={{ minHeight: "100vh" }}> <Projects /> </section>
+      <section id="education" style={{ minHeight: "100vh" }}> <Education /> </section>
+      <section id="achievements" style={{ minHeight: "100vh" }}> <Achievements /> </section>
+      <section id="contact" style={{ minHeight: "100vh" }}> <Contact /> </section>
       
       
     </>
