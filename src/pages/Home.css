@@ -614,29 +614,42 @@
 
 /* MOBILE VIEW */
 @media (max-width: 768px) {
-  
-  /* Hide right skills completely */
+
+  /* Hide left socials */
+  .socials {
+    display: none;
+  }
+
+  /* Hide right skills */
   .skills {
     display: none;
   }
 
-  /* Center content properly */
+  /* Make layout clean & centered */
   .home {
-    flex-direction: column;
-    align-items: center;
+    display: flex;
     justify-content: center;
+    align-items: center;
+    height: 100vh; /* full screen center */
+    padding: 20px;
   }
 
   .center-wrapper {
     width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .center-content {
     text-align: center;
   }
 
-  /* Adjust socials (optional) */
-  .socials {
-    flex-direction: row;
-    justify-content: center;
-    gap: 15px;
-    margin-bottom: 20px;
+  .name {
+    font-size: 28px;
+  }
+
+  .typing {
+    font-size: 20px;
   }
 }
