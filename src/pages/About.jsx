@@ -64,10 +64,6 @@ function About() {
               <p>LeetCode Problems</p>
             </div>
 
-            <div className="stat-card">
-              <h3>20+</h3>
-              <p>System Design patterns</p>
-            </div>
 
             <div className="stat-card">
               <h3>3+</h3>
