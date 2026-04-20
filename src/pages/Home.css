@@ -612,44 +612,57 @@
 
 
 
-/* MOBILE VIEW */
 @media (max-width: 768px) {
 
-  /* Hide left socials */
+  /* ❌ REMOVE LEFT + RIGHT */
   .socials {
-    display: none;
+    display: none !important;
   }
 
-  /* Hide right skills */
   .skills {
-    display: none;
+    display: none !important;
   }
 
-  /* Make layout clean & centered */
-  .home {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 100vh; /* full screen center */
-    padding: 20px;
-  }
-
+  /* 🧠 RESET ABSOLUTE POSITIONS */
   .center-wrapper {
+    position: static !important;
+    transform: none !important;
     width: 100%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
   }
 
   .center-content {
+    position: static !important;
+    transform: none !important;
+    width: 100% !important;
+  }
+
+  /* ✅ TRUE CENTER */
+  .home {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+    height: 100vh;
     text-align: center;
   }
 
+  /* 📱 TEXT SIZING */
+  .intro {
+    font-size: 18px;
+  }
+
   .name {
-    font-size: 28px;
+    font-size: 32px;
+    line-height: 1.2;
   }
 
   .typing {
-    font-size: 20px;
+    font-size: 18px;
+  }
+
+  .cv-btn {
+    font-size: 14px;
+    padding: 10px 20px;
   }
 }
