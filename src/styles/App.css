@@ -153,3 +153,42 @@ html, body {
   padding: 0;
   overflow-x: hidden;  /* 🔥 MOST IMPORTANT */
 }
+
+
+body {
+  margin: 0;
+  overflow-x: hidden;
+}
+
+
+* {
+  box-sizing: border-box;
+}
+
+html, body {
+  margin: 0;
+  padding: 0;
+  overflow-x: hidden; /* prevents scroll */
+}
+
+
+
+
+html, body {
+  margin: 0;
+  padding: 0;
+  overflow-x: hidden;
+  width: 100%;
+}
+
+
+
+* {
+  box-sizing: border-box;
+}
+
+
+
+.home, .navbar, .center-wrapper, .center-content {
+  max-width: 100%;
+}

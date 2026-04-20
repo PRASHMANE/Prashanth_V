@@ -633,3 +633,35 @@
     border-top: 1px solid #333;
   }
 }
+
+
+
+
+
+
+
+
+
+
+
+@media (max-width: 768px) {
+
+  .center-content {
+    position: static !important;
+    width: 100% !important;
+    left: auto !important;
+    transform: none !important;
+  }
+
+  .center-wrapper {
+    position: static !important;
+    transform: none !important;
+    width: 100%;
+  }
+}
+
+
+.skills {
+  max-width: 100%;
+  overflow: hidden;
+}
