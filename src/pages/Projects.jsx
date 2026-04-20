@@ -7,7 +7,7 @@ function Projects() {
   const projects = [
     {
     name: "JungleEye AI",
-    video: "",
+    video: project1,
     tools: ["Python", "OpenCV", "TensorFlow"],
     desc: "AI-based wildlife monitoring system.",
     live: "",
@@ -15,7 +15,7 @@ function Projects() {
   },
 
   {
-    name: "JungleEye AI",
+    name: "Where Am I",
     video: "",
     tools: ["Python", "OpenCV", "TensorFlow"],
     desc: "AI-based wildlife monitoring system.",

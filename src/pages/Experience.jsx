@@ -1,71 +1,72 @@
 import { useState } from "react";
-import "./Experience.css";
+import "./Education.css";
 import { FaEye } from "react-icons/fa";
-import Almabetter from "../assets/AB.png";
-import Fuel from "../assets/Fuel.png";
-import Take from "../assets/Take.png";
 
-function Experience() {
+import School from "../assets/AB.png";
+import PU from "../assets/Fuel.png";
+import College from "../assets/Take.png";
+
+function Education() {
   const [selectedImage, setSelectedImage] = useState(null);
 
   const data = [
     {
-      company: "AlmaBetter",
-      role: "Gen AI Intern",
-      time: "July 2025 -  July 2026",
-      location: "remort",
-      logo: Almabetter,
-      proof: Almabetter, // offer letter
-    },
-    {
-      company: "Fuel",
-      role: "Devops Intern",
-      time: "Oct 2025 - Nov 2025",
+      institute: "Almabetter",
+      degree: "Gen AI Intern",
+      time: "July 2025 - Jan 2026",
       location: "Remote",
-      logo: Fuel,
-      proof: "https://via.placeholder.com/600",
+      logo: School,
+      proof: School, // marksheet
     },
     {
-      company: "Take - It - Smart",
-      role: "DataScience Intern",
+      institute: "Fuel",
+      degree: "Devops Intern",
+      time: "Oct 2025 - Nov 2025",
+      location: "Hubli",
+      logo: PU,
+      proof: PU,
+    },
+    {
+      institute: "Take - It - Smart",
+      degree: "DataScience Intern",
       time: "Feb 2026 - Present",
-      location: "Hyderabad",
-      logo: Take,
-      proof: "https://via.placeholder.com/600",
+      location: "Hybrid",
+      logo: College,
+      proof: College,
     },
   ];
 
   return (
-    <section className="experience">
+    <section className="education">
 
-      <h2 className="exp-title">Experience</h2>
+      <h2 className="edu-title">Experience</h2>
 
-      <div className="exp-wrapper">
+      <div className="edu-wrapper">
 
-        <div className="exp-line"></div>
+        <div className="edu-line"></div>
 
         {data.map((item, index) => (
           <div
             key={index}
-            className={`exp-item ${index % 2 === 0 ? "left" : "right"}`}
+            className={`edu-item ${index % 2 === 0 ? "left" : "right"}`}
           >
 
-            <div className="exp-card">
+            <div className="edu-card">
 
-              <div className="exp-header">
+              <div className="edu-header">
                 <img src={item.logo} alt="logo" />
 
                 <div>
-                  <h3>{item.company}</h3>
-                  <p>{item.role}</p>
+                  <h3>{item.institute}</h3>
+                  <p>{item.degree}</p>
                 </div>
 
                 <span className="loc">{item.location}</span>
               </div>
 
-              <div className="exp-time">{item.time}</div>
+              <div className="edu-time">{item.time}</div>
 
-              {/* EYE BUTTON */}
+              {/* 👁 VIEW BUTTON */}
               <div
                 className="eye"
                 onClick={() => setSelectedImage(item.proof)}
@@ -91,4 +92,4 @@ function Experience() {
   );
 }
 
-export default Experience;
+export default Education;
