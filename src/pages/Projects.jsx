@@ -6,10 +6,10 @@ import project1 from "../assets/project1.mp4";
 function Projects() {
   const projects = [
     {
-    name: "JungleEye AI",
+    name: "Hotel Management System",
     video: project1,
-    tools: ["Python", "OpenCV", "TensorFlow"],
-    desc: "AI-based wildlife monitoring system.",
+    tools: ["React", "Java Spring Boot", "html", "css", "mysql","jwt"],
+    desc: "Full-stack hotel management system with React frontend and Spring Boot backend.",
     live: "",
     github: "https://github.com/PRASHMANE",
   },
