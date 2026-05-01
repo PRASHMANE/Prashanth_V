@@ -60,7 +60,7 @@ function Skills() {
         { name: "Spring Boot", percent: 90 },
         { name: "REST APIs", percent: 92 },
         { name: "Microservices", percent: 85 },
-        { name: "Kafka", percent: 75 },
+        { name: "FastApi", percent: 75 },
         { name: "gRPC", percent: 70 },
         { name: "JWT Auth", percent: 88 },
       ]
@@ -71,19 +71,22 @@ function Skills() {
 
       // ✅ SHOW ONLY THIS IN CARD
       preview: [
-        { name: "Spring Boot", percent: 90 },
-        { name: "REST APIs", percent: 92 },
-        { name: "Microservices", percent: 85 },
+        { name: "Numpy", percent: 90 },
+        { name: "Pandas", percent: 85 },
+        { name: "Scikit-learn", percent: 80 },
       ],
 
       // ✅ SHOW THIS IN MODAL (FULL)
       full: [
-        { name: "Spring Boot", percent: 90 },
-        { name: "REST APIs", percent: 92 },
-        { name: "Microservices", percent: 85 },
-        { name: "Kafka", percent: 75 },
-        { name: "gRPC", percent: 70 },
-        { name: "JWT Auth", percent: 88 },
+        { name: "Numpy", percent: 90 },
+        { name: "Pandas", percent: 85 },
+        { name: "Scikit-learn", percent: 80 },
+        { name: "TensorFlow", percent: 75 },
+        { name: "PyTorch", percent: 70 },
+        { name: "Hugging Face", percent: 88 },
+        { name: "LangChain", percent: 85 },
+        { name: "LangGraph", percent: 80 },
+        { name: "Transformers", percent: 75 },
       ]
     },
     {
@@ -92,19 +95,19 @@ function Skills() {
 
       // ✅ SHOW ONLY THIS IN CARD
       preview: [
-        { name: "Spring Boot", percent: 90 },
-        { name: "REST APIs", percent: 92 },
-        { name: "Microservices", percent: 85 },
+        { name: "MySQL", percent: 90 },
+        { name: "PostgreSQL", percent: 92 },
+        { name: "MongoDB", percent: 85 },
       ],
 
       // ✅ SHOW THIS IN MODAL (FULL)
       full: [
-        { name: "Spring Boot", percent: 90 },
-        { name: "REST APIs", percent: 92 },
-        { name: "Microservices", percent: 85 },
-        { name: "Kafka", percent: 75 },
-        { name: "gRPC", percent: 70 },
-        { name: "JWT Auth", percent: 88 },
+        { name: "MySQL", percent: 90 },
+        { name: "PostgreSQL", percent: 92 },
+        { name: "MongoDB", percent: 85 },
+        { name: "Vector DB", percent: 75 },
+        { name: "Redis", percent: 70 },
+        { name: "Faiss", percent: 88 },
       ]
     },
     {
@@ -113,19 +116,19 @@ function Skills() {
 
       // ✅ SHOW ONLY THIS IN CARD
       preview: [
-        { name: "Spring Boot", percent: 90 },
-        { name: "REST APIs", percent: 92 },
-        { name: "Microservices", percent: 85 },
+        { name: "CI/CD", percent: 90 },
+        { name: "Docker", percent: 92 },
+        { name: "Kubernetes", percent: 85 },
       ],
 
       // ✅ SHOW THIS IN MODAL (FULL)
       full: [
-        { name: "Spring Boot", percent: 90 },
-        { name: "REST APIs", percent: 92 },
-        { name: "Microservices", percent: 85 },
-        { name: "Kafka", percent: 75 },
-        { name: "gRPC", percent: 70 },
-        { name: "JWT Auth", percent: 88 },
+        { name: "CI/CD", percent: 90 },
+        { name: "Docker", percent: 92 },
+        { name: "Kubernetes", percent: 85 },
+        { name: "Jenkins", percent: 75 },
+        { name: "AWS", percent: 70 },
+        { name: "Grafana", percent: 88 },
       ]
     },
   ];
